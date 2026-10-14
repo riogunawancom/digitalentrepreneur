@@ -183,6 +183,11 @@ a:hover {
   background: #fff;
 }
 
+.card video {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 .signature {
   margin-top: 2.25rem;
 }
