@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import Signature from './Signature.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  signed?: boolean;
+}
+
+const { title, description, signed = true } = Astro.props;
+---
+
+<Base title={title} description={description}>
+  <main class="sheet">
+    <article class="card">
+      <p class="back"><a href="/">← Kembali</a></p>
+      <slot />
+      {signed && <Signature />}
+    </article>
+  </main>
+</Base>

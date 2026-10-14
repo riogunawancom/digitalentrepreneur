@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "digitalentrepreneur",
+  "account_id": "216229ad2afbdfa98e07d8d7d4722b2a",
+  "compatibility_date": "2026-10-14",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "traces": {
+      "enabled": true
+    }
+  },
+  "routes": [
+    {
+      "pattern": "digitalentrepreneur.co.id",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.digitalentrepreneur.co.id",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash"
+  }
+}

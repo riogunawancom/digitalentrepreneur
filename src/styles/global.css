@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "Vuturi Sans";
+  src: url("/fonts/VuturiSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vuturi Sans";
+  src: url("/fonts/VuturiSans-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #fff;
+  --fg: #000;
+  --measure: 42rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Vuturi Sans", sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 1px solid var(--fg);
+  outline-offset: 3px;
+}
+
+.home {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 2.5rem 1rem;
+}
+
+.stage,
+.sheet {
+  width: min(var(--measure), 100%);
+}
+
+.sheet {
+  margin-inline: auto;
+  padding-block: 4.5rem 5rem;
+}
+
+.card {
+  border: 1px solid var(--fg);
+  border-radius: 12px;
+  padding: clamp(1.5rem, 4vw, 2.4rem);
+}
+
+.mark {
+  display: block;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-bottom: 1.05rem;
+  fill: currentColor;
+}
+
+.quote-card blockquote {
+  margin: 0;
+}
+
+.quote-card p {
+  margin: 0;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+
+.quote-card cite {
+  display: block;
+  margin-top: 1.35rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+
+.next {
+  margin: 1.15rem 0 0;
+  font-weight: 500;
+}
+
+.back {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.card h1 {
+  margin: 1.35rem 0 1.15rem;
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.card h2 {
+  margin: 2rem 0 0.65rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
+.card p,
+.card li {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.card p {
+  margin: 0 0 1rem;
+}
+
+.card ul {
+  margin: 0 0 1rem;
+  padding-left: 1.15rem;
+}
+
+.card li + li {
+  margin-top: 0.5rem;
+}
+
+.card strong {
+  font-weight: 700;
+}
+
+.card em {
+  font-style: italic;
+}
+
+.card figure {
+  margin: 1.5rem 0 1.75rem;
+}
+
+.card img,
+.card video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.signature {
+  margin-top: 2.25rem;
+}
+
+.signature p {
+  margin: 0;
+}
+
+.motto {
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .sheet {
+    width: min(var(--measure), calc(100% - 1.5rem));
+    padding-block: 1.5rem 2.5rem;
+  }
+}
