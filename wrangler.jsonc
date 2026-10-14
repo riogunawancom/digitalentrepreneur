@@ -20,8 +20,17 @@
       "custom_domain": true
     }
   ],
+  "main": "./worker.js",
   "assets": {
     "directory": "./dist",
-    "html_handling": "auto-trailing-slash"
-  }
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": ["/video/*"]
+  },
+  "r2_buckets": [
+    {
+      "bucket_name": "digitalentrepreneur-video",
+      "binding": "VIDEO"
+    }
+  ]
 }
